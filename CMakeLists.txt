@@ -135,6 +135,9 @@ if (ANDROID)
   message ("YOUI -> disable libunwind due to a bug in NDK where libunwind was included from the host instead of the target")
   set(HAVE_UNWIND_H OFF CACHE INTERNAL OFF FORCE)
   set(HAVE_LIBUNWIND_H OFF CACHE INTERNAL OFF FORCE)
+  set(HAVE_EXECINFO_H OFF CACHE INTERNAL OFF FORCE)
+  set(HAVE_EXECINFO_BACKTRACE FALSE)
+  set(HAVE_EXECINFO_BACKTRACE_SYMBOLS FALSE)
 endif()
 
 # NOTE gcc does not fail if you pass a non-existent -Wno-* option as an
